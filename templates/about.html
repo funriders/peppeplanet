@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Peppe Planet - About Us{% endblock %}
+    {% block extra_css %}
+   <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
 
 
 {% block content %}
@@ -25,11 +28,11 @@
                                 with world-class safety standards to create unforgettable experiences for families and
                                 profitable models for our franchise partners.
                             </p>
-                                <a href="https://www.google.com/maps/search/?api=1&query=Dreams+Mall+Kottiyam" 
+                                <!--<a href="https://www.google.com/maps/search/?api=1&query=Dreams+Mall+Kottiyam" 
        target="_blank" 
        class="accent-color">
         Location: Peppe Planet, 3rd Floor, Dreams Mall, Kottiyam
-    </a>
+    </a>-->
                         </div>
                     </div>
                     <div class="col mb-3 scrollanimation animated pulse">
@@ -923,18 +926,19 @@ Peppe Planet is also the perfect spot for birthday celebrations with customizabl
 
 
         <!-- Section Partner -->
-        <div class="section">
-           <div class="r-container bg-attach-cover bg-accent-color-4 p-5 rounded-5"
-     style="background-image: url('{% static "image/BG9.png" %}');">
+        <!--<div class="section">
+          <div class="r-container bg-attach-cover bg-accent-color-4 p-5 rounded-5"
+     style="background-image: url('{% static 'image/BG9.png' %}');">
+
 
                 <div class="d-flex flex-column gap-3 text-center align-items-center justify-content-center mx-auto">
                     <h4>Trusted by <span class="accent-color fw-bold">Malls, Schools & Brands</span></h4>
                     <p>Funriders & Peppe Planet collaborate with leading malls, developers, schools and institutions to
                         create safe and exciting play environments.</p>
                     <div class="marquee-container">
-                        <div class="marquee-content">
+                        <div class="marquee-content">-->
                             <!-- Replace these with real partner logos when ready -->
-                            <div class="marquee-item py-4 align-items-center">
+                            <!--<div class="marquee-item py-4 align-items-center">
                         
                             </div>
                             <div class="marquee-item py-4 align-items-center">
@@ -994,10 +998,10 @@ Peppe Planet is also the perfect spot for birthday celebrations with customizabl
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
         <!-- Section Marquee: What We Offer -->
-        <div class="section py-0">
+        <!--<div class="section py-0">
             <div class="r-container">
                 <div class="d-flex flex-column gap-3 text-center align-items-center justify-content-center mx-auto">
                     <div class="marquee-container">
@@ -1118,10 +1122,10 @@ Peppe Planet is also the perfect spot for birthday celebrations with customizabl
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
         <!-- Section Why Choose Us -->
-    <div class="section bg-attach-cover"
+    <!--<div class="section bg-attach-cover"
      style="background-image: url('{% static "image/BG7.png" %}');">
 
             <div class="r-container d-flex flex-column gap-3">
@@ -1176,7 +1180,253 @@ Peppe Planet is also the perfect spot for birthday celebrations with customizabl
                     </div>
                 </div>
             </div>
+        </div>-->
+
+        <!-- Section Partner -->
+      <!--<div class="section">
+        <div class="r-container">-->
+          <!--<div
+            class="d-flex flex-column gap-3 text-center align-items-center justify-content-center mx-auto"
+          >
+            <h4>
+               <span class="accent-color fw-bold"></span>
+              <span class="brush2">Packages</span>
+            </h4>-->
+            <!--<div class="overflow-hidden w-100">
+              <div class="position-relative" style="padding-inline: 5rem">
+                <div
+                  class="swiper swiperPartner scrollanimation animated fadeInDown"
+                >-->
+                  <!-- Additional required wrapper -->
+                  <!--<div class="swiper-wrapper">
+                    <div class="swiper-slide p-0">
+                      <div class="partner">
+                       <img src="{% static 'image/Logo-1.png' %}" class="img-fluid" alt="image">
+
+                      </div>
+                    </div>
+                    <div class="swiper-slide p-0">
+                      <div class="partner">
+                        <img src="{% static 'image/Logo-2.png' %}" class="img-fluid" alt="image">
+
+                      </div>
+                    </div>
+                    <div class="swiper-slide p-0">
+                      <div class="partner">
+                        <img src="{% static 'image/Logo-3.png' %}" class="img-fluid" alt="image">
+
+                      </div>
+                    </div>
+                    <div class="swiper-slide p-0">
+                      <div class="partner">
+                       <img src="{% static 'image/Logo-4.png' %}" class="img-fluid" alt="image">
+
+                      </div>
+                    </div>
+                    <div class="swiper-slide p-0">
+                      <div class="partner">
+                        <img src="{% static 'image/Logo-1.png' %}" class="img-fluid" alt="image">
+
+                      </div>
+                    </div>
+                    <div class="swiper-slide p-0">
+                      <div class="partner">
+                       <img src="{% static 'image/Logo-2.png' %}" class="img-fluid" alt="image">
+
+                      </div>
+                    </div>
+                    <div class="swiper-slide p-0">
+                      <div class="partner">
+                       <img src="{% static 'image/Logo-3.png' %}" class="img-fluid" alt="image">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+                <!-- Navigation arrows (on top of everything) -->
+                <!--<div
+                  class="swiper-button-next accent2"
+                  style="z-index: 2"
+                ></div>
+                <div
+                  class="swiper-button-prev accent2"
+                  style="z-index: 2"
+                ></div>
+              </div>
+            </div>
+            
+          </div>
         </div>
+      </div>-->
+        <!-- Section Team -->
+             <div class="section bg-attach-cover" style="background-image: url(image/BG2.png);">
+    <div class="r-container d-flex flex-column gap-3">
+        <div class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center scrollanimation animated zoomIn"
+            style="max-width: 700px;">
+            <h6 class="brush1 accent-color-2" style="width: max-content;"></h6>
+            <h3> Play & Party <span class="accent-color fw-bold">Birthday Packages</span></h3>
+            <p style="max-width: 600px;">
+               Experience a whole new birthday party experience with Peppe’s play and 
+party packages. We also have customized package options available according to your 
+need.
+            </p>
+        </div>
+        <div class="overflow-hidden">
+            <div class="swiper swiperTeam">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Each card is now its own slide -->
+                    
+                  <!-- Slide 1 -->
+<div class="swiper-slide">
+  <div class="package-card bg-1">
+    <div class="package-image-container">
+      <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
+           class="package-image" alt="Kids Birthday Party">
+      <!--<div class="package-badge">POPULAR</div>-->
+    </div>
+    <div class="package-content">
+      <h4 class="package-title">365th Day Party</h4>
+      <p class="package-subtitle">Includes 3 hours Party Hall, Play Time & Food</p>
+      <div class="package-price">₹699 <span>per head (Min 12 pax)</span></div>
+      <!--<ul class="package-features">
+        <li><i class="fas fa-check"></i> Welcome Drink</li>
+        <li><i class="fas fa-check"></i> Sandwich & French Fries</li>
+        <li><i class="fas fa-check"></i> Ice Cream & Chocolates</li>
+        <li><i class="fas fa-check"></i> Party Hall & Play Area</li>
+        <li><i class="fas fa-check"></i> Decoration, Cake Table, Sound & Mic</li>
+      </ul>-->
+      <!--<a href="#contact" class="package-button">Book Now</a>-->
+    </div>
+  </div>
+</div>
+
+<!-- Slide 2 -->
+<div class="swiper-slide">
+  <div class="package-card bg-2">
+    <div class="package-image-container">
+      <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
+           class="package-image" alt="Kids Birthday Party">
+      <!--<div class="package-badge">FUN</div>-->
+    </div>
+    <div class="package-content">
+      <h4 class="package-title">Rounded Bites Party</h4>
+      <p class="package-subtitle">3 hours Party Hall, Play Time & Food</p>
+      <div class="package-price">₹699 <span>per head (Min 12 pax)</span></div>
+      <!--<ul class="package-features">
+        <li><i class="fas fa-check"></i> Burger (Veg / Non-Veg)</li>
+        <li><i class="fas fa-check"></i> Fries, Ice Cream & Chocolates</li>
+        <li><i class="fas fa-check"></i> Surprise Gift</li>
+        <li><i class="fas fa-check"></i> Disco Light & Decoration</li>
+        <li><i class="fas fa-check"></i> Invitation E-Card & Small Stage</li>
+      </ul>-->
+      <!--<a href="#contact" class="package-button">Book Now</a>-->
+    </div>
+  </div>
+</div>
+
+<!-- Slide 3 -->
+<div class="swiper-slide">
+  <div class="package-card bg-3">
+    <div class="package-image-container">
+      <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
+           class="package-image" alt="Kids Birthday Party">
+      <!--<div class="package-badge">VALUE</div>-->
+    </div>
+    <div class="package-content">
+      <h4 class="package-title">Rounded Triangles Party</h4>
+      <p class="package-subtitle">3 hours Party Hall, Play Time & Food</p>
+      <div class="package-price">₹999 <span>per head (Min 12 pax)</span></div>
+      <!--<ul class="package-features">
+        <li><i class="fas fa-check"></i> Small Pizza (Veg / Non-Veg)</li>
+        <li><i class="fas fa-check"></i> Fries, Ice Cream & Chocolates</li>
+        <li><i class="fas fa-check"></i> Minimal Decoration</li>
+        <li><i class="fas fa-check"></i> Birthday Cap & Confetti</li>
+        <li><i class="fas fa-check"></i> Sound, Mic & Small Stage</li>
+      </ul>-->
+      <!--<a href="#contact" class="package-button">Book Now</a>-->
+    </div>
+  </div>
+</div>
+
+<!-- Slide 4 -->
+<div class="swiper-slide">
+  <div class="package-card bg-4">
+    <div class="package-image-container">
+      <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
+           class="package-image" alt="Kids Birthday Party">
+      <!--<div class="package-badge">PREMIUM</div>-->
+    </div>
+    <div class="package-content">
+      <h4 class="package-title">Peppe Ultimate Party</h4>
+      <p class="package-subtitle">3 hours Party Hall, Play Time & Food</p>
+      <div class="package-price">₹1049 <span>per head (Min 20 pax)</span></div>
+      <!--<ul class="package-features">
+        <li><i class="fas fa-check"></i> Soup & Fried Rice</li>
+        <li><i class="fas fa-check"></i> Ice Cream & Chocolates</li>
+        <li><i class="fas fa-check"></i> Surprise Gift</li>
+        <li><i class="fas fa-check"></i> Decoration & Disco Light</li>
+        <li><i class="fas fa-check"></i> Invitation E-Card & Stage</li>
+      </ul>-->
+      <!--<a href="#contact" class="package-button">Book Now</a>-->
+    </div>
+  </div>
+</div>
+
+<!-- Slide 5 -->
+<div class="swiper-slide">
+  <div class="package-card bg-5">
+    <div class="package-image-container">
+      <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
+           class="package-image" alt="Kids Birthday Party">
+      <!--<div class="package-badge">MEGA</div>-->
+    </div>
+    <div class="package-content">
+      <h4 class="package-title">Peppe Big Bang Party</h4>
+      <p class="package-subtitle">3 hours Party Hall, Play Time & Food</p>
+      <div class="package-price">₹1499 <span>per head (Min 40 pax)</span></div>
+      <!--<ul class="package-features">
+        <li><i class="fas fa-check"></i> Buffet Lunch</li>
+        <li><i class="fas fa-check"></i> Starters, Main Course & Desserts</li>
+        <li><i class="fas fa-check"></i> Themed Decoration</li>
+        <li><i class="fas fa-check"></i> Return Gifts & Disco Light</li>
+        <li><i class="fas fa-check"></i> Stage, Sound & Mic</li>
+      </ul>-->
+      <!--<a href="#contact" class="package-button">Book Now</a>-->
+    </div>
+  </div>
+</div>
+
+<!-- Slide 6 -->
+<div class="swiper-slide">
+  <div class="package-card bg-6">
+    <div class="package-image-container">
+      <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
+           class="package-image" alt="Kids Birthday Party">
+      <!--<div class="package-badge">MINI</div>--->
+    </div>
+    <div class="package-content">
+      <h4 class="package-title">Mini Surprise Party</h4>
+      <p class="package-subtitle">Includes 2 hours Play Time</p>
+      <div class="package-price">₹4000 <span>for 4 people</span></div>
+      <!--<ul class="package-features">
+        <li><i class="fas fa-check"></i> Minimal Decorations</li>
+        <li><i class="fas fa-check"></i> Surprise Gift</li>
+        <li><i class="fas fa-check"></i> Birthday Cap & Goggles</li>
+        <li><i class="fas fa-check"></i> Confetti Popper</li>
+        <li><i class="fas fa-check"></i> Cake Cutting Table</li>
+      </ul>-->
+      <!--<a href="#contact" class="package-button">Book Now</a>-->
+    </div>
+  </div>
+</div>
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
 
         <!-- Section CTA -->
       <div class="section scrollanimation animated zoomIn">
@@ -1215,7 +1465,7 @@ Peppe Planet is also the perfect spot for birthday celebrations with customizabl
       </div>
 
    <!-- Section FAQs -->
-        <div class="section bg-attach-cover" style="background-image: url(image/BG7.png);">
+        <!-- <div class="section bg-attach-cover" style="background-image: url(image/BG7.png);">
             <div class="r-container d-flex flex-column gap-3">
                 <div
                     class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center scrollanimation animated zoomIn"
@@ -1306,10 +1556,10 @@ Peppe Planet is also the perfect spot for birthday celebrations with customizabl
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Second column FAQ – franchise & safety -->
-                    <div class="col mb-3">
+                    <!-- <div class="col mb-3">
                         <div class="accordion d-flex flex-column gap-4" id="faqAccordion2">
                             <div class="accordion-item-faq">
                                 <h2 class="accordion-header">
@@ -1396,7 +1646,7 @@ Peppe Planet is also the perfect spot for birthday celebrations with customizabl
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </main>
 

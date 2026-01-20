@@ -1,0 +1,123 @@
+.locate-main-container {
+    padding: 40px 15px;
+    margin-top: 80px;   /* reduce for mobile */
+    width: 100%;
+    display: block;     /* 🔥 IMPORTANT */
+}
+
+.location-row {
+    display: flex;
+    gap: 30px;
+}
+
+.location-card {
+    flex: 1;
+    min-height: 360px;   /* 🔼 increase height */
+    background: linear-gradient(180deg, #ffffff, #f8f6fb);
+    border-radius: 18px;
+    padding: 40px 25px; /* more vertical spacing */
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(75, 0, 129, 0.15);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* evenly spread content */
+}
+
+
+.location-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #4b0081;
+}
+
+.location-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(75, 0, 129, 0.25);
+}
+
+.location-card h4 {
+    font-size: 14px;
+    color: #4b0081;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.location-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #2a0146;
+}
+
+.location-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.map-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 22px;
+    border-radius: 30px;
+    background: #4b0081;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.map-btn:hover {
+    background: #3a0066;
+    transform: scale(1.05);
+}
+.location-row {
+    display: flex;
+    gap: 25px;
+    max-width: 1050px;
+    margin: 0 auto 60px;
+    flex-wrap: wrap;    /* 🔥 allows full card visibility */
+}
+
+.location-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.location-card {
+    flex: 1 1 30%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .location-card {
+        flex: 1 1 45%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .location-card {
+        flex: 1 1 100%;
+    }
+}
+@media (min-width: 992px) {
+    .first-row {
+        margin-top: 40px;  /* 🔼 space above ONLY first 3 cards */
+    }
+}
+.location-card h3 {
+    font-size: 22px;
+    font-weight: 900;   /* 🔥 more bold */
+    color: #2a0146;
+    margin-bottom: 10px;
+}

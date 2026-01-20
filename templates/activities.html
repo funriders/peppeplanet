@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Peppe Planet - Activities{% endblock %}
+ {% block extra_css %}
+   <link rel="stylesheet" href="{% static 'activities/about.css' %}" />
+{% endblock %}
+
 
 {% block content %}
 <body>
@@ -9,7 +13,7 @@
     <!-- Main -->
     <main>
         <!-- Banner -->
-       <div class="section position-relative bg-attach-cover"
+       <!--<div class="section position-relative bg-attach-cover"
      style="background-image: url('{% static 'image/BG10.png' %}'); padding-bottom: 25rem; padding-top: 5rem;">
 
 
@@ -30,8 +34,94 @@
                     </div>
                 </div>
             </div>
+          </div>-->
+         <!-- Section About Us -->
+<section class="position-relative bg-attach-cover" 
+  style="background-image: url('{% static 'image/BG10.png' %}'); padding-bottom: 25rem; padding-top: 10rem;">
+  
+  <div class="activities-section">
+    <div class="r-container">
+      <div class="row row-cols-1 row-cols-xl-2">
+        
+        <!-- Text Column - Order first on mobile, first on xl -->
+        <div class="col mb-3 mb-xl-0 order-first">
+          <div class="scrollanimation animated fadeInLeft">
+            <div class="d-flex flex-column gap-3" style="margin-top: 2rem;">
+              <h6 class="brush1 accent-color-2" style="width: max-content">
+                Activities
+              </h6>
+              <h2 class="mb-0">
+                <span class="accent-color fw-bold">
+                  Our Creative
+                </span>
+                Play Activities
+              </h2>
+              <p class="mb-0" style="max-width: 600px">
+                At Peppe Planet, every activity is designed to spark curiosity, build confidence, and turn every moment
+                into an exciting adventure.
+              </p>
+            </div>
           </div>
+        </div>
 
+        <!-- Carousel Column - Order second on mobile, second on xl -->
+        <div class="col order-last order-xl-first">
+          <div class="scrollanimation animated fadeInRight hero-carousel-col">
+            <!-- Main Carousel Container with Rounded Corners -->
+            <div class="carousel-container rounded-4 overflow-hidden shadow-lg" style="position: relative;">
+              <div id="heroCarousel" class="carousel slide carousel-fade" 
+                   data-bs-ride="carousel" data-bs-interval="3000">
+                
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" 
+                          class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" 
+                          aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" 
+                          aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static 'image/carouselimg2.jpg' %}" 
+                         class="d-block w-100" 
+                         alt="Children participating in creative play activities"
+                         style="object-fit: cover; height: 400px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'image/carouselimg1.png' %}" 
+                         class="d-block w-100" 
+                         alt="Group of children learning through play"
+                         style="object-fit: cover; height: 400px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'image/carouselimg3.jpg' %}" 
+                         class="d-block w-100" 
+                         alt="Fun educational games at Peppe Planet"
+                         style="object-fit: cover; height: 400px;">
+                  </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" 
+                        data-bs-slide="prev" aria-label="Previous slide">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" 
+                        data-bs-slide="next" aria-label="Next slide">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
         <!-- Section Activities -->
        {% comment %} <div class="section bg-attach-cover"
      style="background-image: url('{% static "image/BG12.png" %}');">

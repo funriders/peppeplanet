@@ -1,0 +1,30 @@
+/* Add rounded corners to carousel */
+.rounded-carousel {
+  border-radius: 1rem !important; /* Adjust radius as needed */
+  overflow: hidden;
+}
+
+/* If you want different border radius sizes, you can use Bootstrap classes: */
+/* 
+.rounded-3 = 0.5rem 
+.rounded-4 = 1rem 
+.rounded-5 = 1.5rem
+*/
+
+/* Optional: Add shadow for better visual effect */
+.rounded-carousel {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure carousel images also have rounded corners */
+.rounded-carousel .carousel-inner,
+.rounded-carousel .carousel-item img {
+  border-radius: inherit;
+}
+
+/* Optional: Rounded corners for carousel indicators */
+.rounded-carousel .carousel-indicators button {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}

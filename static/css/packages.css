@@ -1,0 +1,127 @@
+:root {
+  --theme: #4b0081;
+}
+
+/* CARD */
+.package-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  transition: transform .25s ease;
+  will-change: transform;
+}
+
+.package-card:hover {
+  transform: translateY(-6px);
+}
+
+.package-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.card-content {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.package-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--theme);
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--theme);
+}
+
+small {
+  color: #666;
+}
+
+/* OVERLAY (GPU ACCELERATED – NO LAG) */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: #4b0081;
+  color: #fff;
+  padding: 24px;
+
+  transform: translateY(100%);
+  transition: transform .35s ease;
+  will-change: transform;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.package-card.is-active .card-overlay,
+.package-card:hover .card-overlay {
+  transform: translateY(0);
+}
+
+/* Overlay content */
+.card-overlay h5 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-overlay ul {
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.know-more-btn {
+  margin-top: 12px;
+  align-self: center;
+  background: #fff;
+  color: var(--theme);
+  border: none;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;   /* removes underline */
+}
+.addon-link {
+  text-decoration: none;
+  display: block;
+}
+
+.addon-highlight {
+  background: linear-gradient(135deg, #4b0081, #6a1bb1);
+  color: #fff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  margin: 40px 0;
+  box-shadow: 0 10px 30px rgba(75,0,129,0.35);
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.addon-highlight:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(75,0,129,0.45);
+}
+.addon-highlight {
+  margin: 16px 0;   /* instead of 40px */
+}
+a.know-more-btn,
+a.know-more-btn:hover,
+a.know-more-btn:focus,
+a.know-more-btn:active,
+a.know-more-btn:visited {
+  text-decoration: none !important;
+}

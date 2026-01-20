@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Peppe Planet - Packages{% endblock %}
+ {% block extra_css %}
+ <link rel="stylesheet" href="{% static 'css/packages.css' %}" /> {% endblock %}
 
 {% block content %}
+
 <!-- Main -->
-    <main>
-  <!-- Banner -->
-       <div class="section position-relative bg-attach-cover"
-     style="background-image: url('{% static "image/BG10.png" %}'); padding-bottom: 25rem; padding-top: 5rem;">
+     <main>
+        <!-- Banner -->
+    {% comment %}<div class="section position-relative bg-attach-cover"
+     style="background-image: url('{% static 'image/BG10.png' %}');
+            padding-bottom: 25rem;
+            padding-top: 5rem;">
 
             <div class="r-container">
                 <div class="row row-cols-xl-2 row-cols-1">
                     <div class="col mb-3 scrollanimation animated zoomIn">
                         <div class="d-flex flex-column gap-3 justify-content-center h-100">
-                            <h6 class="brush1 accent-color-2 w-max-content">Activities</h6>
-                            <h1>Our Fun <span class="accent-color fw-bold">Educational</span> Activities</h1>
+                            <h6 class="brush1 accent-color-2 w-max-content">Learning Programs</h6>
+                            <h1>Engaging <span class="accent-color fw-bold">Programs</span> for Young Learners</h1>
                             <p style="max-width: 600px;">
-                                We are dedicated to fostering a love for learning in every child. Through engaging
-                                activities, personalized attention, and a supportive environment
+                                We aim to spark curiosity, foster critical thinking, and lay a strong foundation for
+                                lifelong learning in every child.
                             </p>
                         </div>
                     </div>
@@ -27,18 +32,782 @@
                     </div>
                 </div>
             </div>
+        </div>{% endcomment %}
+
+        <!-- Classes -->
+       <div class="section bg-attach-cover"
+     style="background-image: url('{% static 'image/bg-testi.png' %}');">
+
+            <!--<div class="r-container d-flex flex-column gap-3">
+                <div class="d-flex flex-column gap-5 justify-content-center">
+                    <div class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center scrollanimation animated zoomIn"
+                        style="max-width: 700px;">
+                        <h6 class="brush1 accent-color-2" style="width: max-content; margin-top:60px">Unmissable Play & Party Packages
+</h6>
+                        <h3>Unlimited <span class="accent-color fw-bold">Fun & Offers</span> for Every Kids</h3>
+                        <p style="max-width: 600px;">
+                            From joyful play sessions to unforgettable birthday celebrations, our thoughtfully designed packages bring together exciting attractions, safe indoor play, and memorable experiences for kids and families—all under one roof.
+                        </p>
+                    </div>
+                </div>
+                <div class="row row-cols-xl-3 row-cols-1 scrollanimation animated fadeInLeft">
+                    <div class="col mb-3">
+                        <div class="card class-card">
+                            <h4 >365 th Day Party</h4>
+                            <div class="position-relative h-100">
+                             <img src="{% static 'image/dummy-img-600x400.jpg' %}"
+     class="img-fluid h-100"
+     style="border-radius: 42px; aspect-ratio: 1/1;"
+     alt="Placeholder image">
+
+                                <div class="custom-border bg-accent position-absolute bottom-0 end-0">
+                                    <a href="{% url 'day_party' %}">
+                                        <div class="icon-box class">
+                                            <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card class-card">
+                            <h4>Rounded Bites Birthday Party
+</h4>
+                            <div class="position-relative h-100">
+                               <img src="{% static 'image/dummy-img-600x400.jpg' %}"
+     class="img-fluid h-100"
+     style="border-radius: 42px; aspect-ratio: 1/1;"
+     alt="Placeholder image">
+                                <div class="custom-border bg-accent position-absolute bottom-0 end-0">
+                                     <a href="{% url 'package_details' %}">
+                                        <div class="icon-box class">
+                                            <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card class-card">
+                            <h4>Rounded Triangles Birthday Party
+</h4>
+                            <div class="position-relative h-100">
+                              <img src="{% static 'image/dummy-img-600x400.jpg' %}"
+     class="img-fluid h-100"
+     style="border-radius: 42px; aspect-ratio: 1/1;"
+     alt="Placeholder image">
+                                <div class="custom-border bg-accent position-absolute bottom-0 end-0">
+                                   <a href="{% url 'package_details' %}">
+                                        <div class="icon-box class">
+                                            <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-xl-3 row-cols-1 scrollanimation animated fadeInRight">
+                    <div class="col mb-3">
+                        <div class="card class-card">
+                            <h4 >Peppe Ultimate Birthday Party
+
+Planet</h4>
+                            <div class="position-relative h-100">
+                               <img src="{% static 'image/dummy-img-600x400.jpg' %}"
+     class="img-fluid h-100"
+     style="border-radius: 42px; aspect-ratio: 1/1;"
+     alt="Placeholder image">
+                                <div class="custom-border bg-accent position-absolute bottom-0 end-0">
+                                   <a href="{% url 'package_details' %}">
+                                        <div class="icon-box class">
+                                            <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card class-card">
+                            <h4>Peppe Big Bang
+
+Birthday Party
+</h4>
+                            <div class="position-relative h-100">
+                              <img src="{% static 'image/dummy-img-600x400.jpg' %}"
+     class="img-fluid h-100"
+     style="border-radius: 42px; aspect-ratio: 1/1;"
+     alt="Placeholder image">
+                                <div class="custom-border bg-accent position-absolute bottom-0 end-0">
+                                    <a href="{% url 'package_details' %}">
+                                        <div class="icon-box class">
+                                            <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card class-card">
+                            <h4>Mini Surprise Party</h4>
+                            <div class="position-relative h-100">
+                                <img src="{% static 'image/dummy-img-600x400.jpg' %}" class="img-fluid h-100" style="border-radius: 42px; aspect-ratio: 1/1;" alt="">
+                                <div class="custom-border bg-accent position-absolute bottom-0 end-0">
+                                  <a href="{% url 'package_details' %}">
+                                        <div class="icon-box class">
+                                            <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div class="container py-5">
+<div class="row g-4">
+
+<!-- 1 -->
+<div class="col-lg-4 col-md-6">
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620">
+<div class="card-content">
+  <div>
+    <div class="package-title">365th Day Party</div>
+    <small>3 Hours • Min 12 Pax</small>
+  </div>
+  <div class="price">₹699</div>
+</div>
+<div class="card-overlay">
+<h5>Includes</h5>
+<ul>
+<li>Party Hall & Play Area</li>
+<li>Welcome Drink, Sandwich</li>
+<li>French Fries, Ice Cream</li>
+<li>Minimal Decoration</li>
+<li>Surprise Gift & Disco Light</li>
+</ul>
+<a href="/day_party/" class="know-more-btn">Know More</a>
+</div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="col-lg-4 col-md-6">
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<div class="card-content">
+  <div>
+    <div class="package-title">Rounded Bites Party</div>
+    <small>3 Hours • Min 12 Pax</small>
+  </div>
+  <div class="price">₹699</div>
+</div>
+<div class="card-overlay">
+<h5>Includes</h5>
+<ul>
+<li>Burger (Veg/Non-Veg)</li>
+<li>French Fries & Ice Cream</li>
+<li>Party Hall & Play Area</li>
+<li>Birthday Cap & Goggles</li>
+<li>Sound, Mic & Stage</li>
+</ul>
+<a href="/rounded_bites_birthday_party/" class="know-more-btn">Know More</a>
+</div>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="col-lg-4 col-md-6">
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf">
+<div class="card-content">
+  <div>
+    <div class="package-title">Rounded Triangles Party</div>
+    <small>3 Hours • Min 12 Pax</small>
+  </div>
+  <div class="price">₹999</div>
+</div>
+<div class="card-overlay">
+<h5>Includes</h5>
+<ul>
+<li>Small Pizza (Veg/Non-Veg)</li>
+<li>French Fries & Ice Cream</li>
+<li>Decor, Disco Light</li>
+<li>Invitation E-Card</li>
+<li>Sound & Mic</li>
+</ul>
+<a href="/rounded_triangles_birthday_party/" class="know-more-btn">Know More</a>
+</div>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="col-lg-4 col-md-6">
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce">
+<div class="card-content">
+  <div>
+    <div class="package-title">Peppe Ultimate Party</div>
+    <small>3 Hours • Min 20 Pax</small>
+  </div>
+  <div class="price">₹1049</div>
+</div>
+<div class="card-overlay">
+<h5>Includes</h5>
+<ul>
+<li>Soup & Fried Rice</li>
+<li>Ice Cream & Chocolates</li>
+<li>Play Area & Party Hall</li>
+<li>Confetti & Disco Light</li>
+<li>Sound & Mic</li>
+</ul>
+<a href="/peppe_ultimate_birthday_party/" class="know-more-btn">Know More</a>
+</div>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="col-lg-4 col-md-6">
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659">
+<div class="card-content">
+  <div>
+    <div class="package-title">Peppe Big Bang Party</div>
+    <small>3 Hours • Min 40 Pax</small>
+  </div>
+  <div class="price">₹1499</div>
+</div>
+<div class="card-overlay">
+<h5>Includes</h5>
+<ul>
+<li>Buffet Lunch</li>
+<li>Themed Decoration</li>
+<li>Invitation E-Card</li>
+<li>Disco Light & Stage</li>
+<li>Sound & Mic</li>
+</ul>
+<a href="/peppe_big_bang_birthday_party/" class="know-more-btn">Know More</a>
+</div>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="col-lg-4 col-md-6">
+<div class="package-card">
+<img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5">
+<div class="card-content">
+  <div>
+    <div class="package-title">Mini Surprise Party</div>
+    <small>2 Hours • Max 4 People</small>
+  </div>
+  <div class="price">₹4000</div>
+</div>
+<div class="card-overlay">
+<h5>Includes</h5>
+<ul>
+<li>2 Hours Play Time</li>
+<li>Minimal Decorations</li>
+<li>Surprise Gift</li>
+<li>Birthday Cap & Goggles</li>
+<li>Confetti Popper</li>
+<li>Cake Cutting Table</li>
+<li><strong>Extra: ₹450 / person</strong></li>
+</ul>
+<a href="/mini_surprise_party/" class="know-more-btn">Know More</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+ <div class="r-container">
+<a href="/day_party/#entertainment-addons" class="addon-link">
+  <section class="addon-highlight">
+    <h3>Entertainment Add-Ons Available for Each Package</h3>
+    <!--<p>Magic Show • Mascot Entry • DJ • Balloon Decoration • Face Painting</p>-->
+  </section>
+</a>
+   </div>
+    </div>
+
+  
+     <!-- Section Marquee -->
+        <!--<div class="section py-0">
+            <div class="r-container">
+                <div class="d-flex flex-column gap-3 text-center align-items-center justify-content-center mx-auto">
+                    <div class="marquee-container">
+                        <div class="marquee-content">
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Exploring Nature</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                             <img src="{% static 'image/Asset49.png' %}"
+     class="img-fluid"
+     alt="image">
+
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Learning Astronomy</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                             <img src="{% static 'image/dummy-img-160x90.jpg' %}"
+     class="img-fluid"
+     alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Rock Climbing</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                              <img src="{% static 'image/Asset2.png' %}"
+     class="img-fluid"
+     alt="image">
+
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Museum Visit</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                               <img src="{% static 'image/dummy-img-160x90.jpg' %}"
+     class="img-fluid"
+     alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Chemistry Class</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                               <img src="{% static 'image/Star1.png' %}"
+     class="img-fluid"
+     alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Science Class</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                              <img src="{% static 'image/dummy-img-160x90.jpg' %}"
+     class="img-fluid"
+     alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Singing Class</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                               <img src="{% static 'image/Asset35.png' %}"
+     class="img-fluid"
+     alt="image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="marquee-container reverse">
+                        <div class="marquee-content">
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Exploring Nature</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                             <img src="{% static 'image/Asset49.png' %}"
+     class="img-fluid"
+     alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Learning Astronomy</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                              <img src="{% static 'image/dummy-img-160x90.jpg' %}"
+     class="img-fluid"
+     alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Rock Climbing</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                              <img src="{% static 'image/Asset2.png' %}"
+     class="img-fluid"
+     alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Museum Visit</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                              <img src="{% static 'image/dummy-img-160x90.jpg' %}"
+     class="img-fluid"
+     alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Chemistry Class</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                                <img src="{% static 'image/Star1.png' %}" class="img-fluid" alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Science Class</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                                <img src="{% static 'image/dummy-img-160x90.jpg' %}" class="img-fluid" alt="image">
+                            </div>
+                            <div class="marquee-item py-2 d-flex align-items-center justify-content-center">
+                                <h4>Singing Class</h4>
+                            </div>
+                            <div class="marquee-item py-2 align-items-center">
+                                <img src="{% static 'image/Asset35.png' %}" class="img-fluid" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <!-- Testimonials -->
+        <div class="section bg-attach-cover" style="background-image: url('{% static 'image/bg-testi.png' %}');">
+            <div class="r-container">
+                <div class="d-flex flex-column gap-5 justify-content-center">
+                    <div class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center scrollanimation animated zoomIn"
+                        style="max-width: 700px;">
+                        <h6 class="brush1 accent-color-2" style="width: max-content;">Testimonials</h6>
+                        <h3>What Parents <span class="accent-color fw-bold">Says</span> About Our Program</h3>
+                        <p style="max-width: 600px;">
+                            Explore our FAQ section for answers to common queries about our lessons, subscription plans,
+                            progress tracking, and how to get started.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden">
+                <div class="swiper swiperTestimonials scrollanimation animated fadeInLeft">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper pt-5">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"Exceptional service and care! The
+                                        pharmacists here always go above and beyond to make sure I
+                                        understand my medications and provide valuable advice. They
+                                        truly care about my health."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Gracia Agnez</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"I've always struggled with finding resources
+                                        that
+                                        keep my child engaged outside of school, but this program is different.
+                                        I've
+                                        seen improvements in everything from reading skills to critical
+                                        thinking."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Michelle Karen</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"The progress my son has made using this
+                                        platform has
+                                        been incredible. He no longer feels stressed about learning new
+                                        material, and
+                                        he's tackling challenges with a positive attitude."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Emily Laura</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"Exceptional service and care! The
+                                        pharmacists here always go above and beyond to make sure I
+                                        understand my medications and provide valuable advice. They
+                                        truly care about my health."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Gracia Agnez</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"Exceptional service and care! The
+                                        pharmacists here always go above and beyond to make sure I
+                                        understand my medications and provide valuable advice. They
+                                        truly care about my health."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Gracia Agnez</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper swiperTestimonials2 pt-3 scrollanimation animated fadeInRight">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"Exceptional service and care! The
+                                        pharmacists here always go above and beyond to make sure I
+                                        understand my medications and provide valuable advice. They
+                                        truly care about my health."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Gracia Agnez</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"I've always struggled with finding resources
+                                        that
+                                        keep my child engaged outside of school, but this program is different.
+                                        I've
+                                        seen improvements in everything from reading skills to critical
+                                        thinking."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Michelle Karen</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"The progress my son has made using this
+                                        platform has
+                                        been incredible. He no longer feels stressed about learning new
+                                        material, and
+                                        he's tackling challenges with a positive attitude."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Emily Laura</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"Exceptional service and care! The
+                                        pharmacists here always go above and beyond to make sure I
+                                        understand my medications and provide valuable advice. They
+                                        truly care about my health."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Gracia Agnez</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-container card">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="flex-row">
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--text-color-1);"></i>
+                                    </div>
+                                    <span class="testimonial-text">"Exceptional service and care! The
+                                        pharmacists here always go above and beyond to make sure I
+                                        understand my medications and provide valuable advice. They
+                                        truly care about my health."</span>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-between">
+                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                        <div class="customer-item testimonial">
+                                            <img src="{% static 'image/dummy-img-400x400.jpg' %}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="testimonial-name">Gracia Agnez</span>
+                                            <p class="m-0">Parents</p>
+                                        </div>
+                                    </div>
+                                    <i class="rtmicon rtmicon-blockquote accent-color-3"
+                                        style="font-size: 82px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
         </div>
 
         <!-- Section Pricing Plan -->
         <div class="section"
-         style="background-image: url('{% static "image/BG4.png" %}'); background-position: center; background-size: cover;">
-
+            style="background-image: url('{% static 'image/BG4.png' %}'); background-position: center; background-size: cover;">
             <div class="r-container d-flex flex-column gap-3">
                 <div class="d-flex flex-column gap-5 justify-content-center">
                     <div class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center scrollanimation animated zoomIn"
                         style="max-width: 700px;">
                         <h6 class="brush1 accent-color-2" style="width: max-content;">Pricing Plan</h6>
-                        <h3>Find the <span class="accent-color fw-bold">Perfect Plan</span> for Your Child’s Future</h3>
+                        <h3>Find the <span class="accent-color fw-bold">Perfect Plan</span> for Your Child's Future</h3>
                         <p style="max-width: 600px;">
                             We bring learning to life with engaging activities, real-world connections, and a focus on
                             making every moment exciting.
@@ -65,8 +834,7 @@
                                             <span>/Monthly</span>
                                         </div>
                                     </div>
-                                   <img src="{% static 'image/asset10.png' %}" class="img-fluid" alt="">
-
+                                    <img src="{% static 'image/asset10.png' %}" class="img-fluid" alt="">
                                 </div>
                                 <p>Introduce kids to educational content with minimal commitment.</p>
                                 <div class="d-flex flex-column gap-2">
@@ -112,8 +880,7 @@
                                             <span>/Monthly</span>
                                         </div>
                                     </div>
-                                   <img src="{% static 'image/asset11.png' %}" class="img-fluid" alt="">
-
+                                    <img src="{% static 'image/asset11.png' %}" class="img-fluid" alt="">
                                 </div>
                                 <p>Build a well-rounded foundation in a variety of subjects.</p>
                                 <div class="d-flex flex-column gap-2">
@@ -159,8 +926,7 @@
                                             <span>/Monthly</span>
                                         </div>
                                     </div>
-                                   <img src="{% static 'image/asset12.png' %}" class="img-fluid" alt="">
-
+                                    <img src="{% static 'image/asset12.png' %}" class="img-fluid" alt="">
                                 </div>
                                 <p>Introduce kids to educational content with minimal commitment.</p>
                                 <div class="d-flex flex-column gap-2">
@@ -207,7 +973,6 @@
                                         </div>
                                     </div>
                                     <img src="{% static 'image/asset10.png' %}" class="img-fluid" alt="">
-
                                 </div>
                                 <p>Introduce kids to educational content with minimal commitment.</p>
                                 <div class="d-flex flex-column gap-2">
@@ -253,8 +1018,7 @@
                                             <span>/Yearly</span>
                                         </div>
                                     </div>
-                                   <img src="{% static 'image/asset11.png' %}" class="img-fluid" alt="">
-
+                                    <img src="{% static 'image/asset11.png' %}" class="img-fluid" alt="">
                                 </div>
                                 <p>Build a well-rounded foundation in a variety of subjects.</p>
                                 <div class="d-flex flex-column gap-2">
@@ -300,8 +1064,7 @@
                                             <span>/Yearly</span>
                                         </div>
                                     </div>
-                                   <img src="{% static 'image/asset12.png' %}" class="img-fluid" alt="">
-
+                                    <img src="{% static 'image/asset12.png' %}" class="img-fluid" alt="">
                                 </div>
                                 <p>Introduce kids to educational content with minimal commitment.</p>
                                 <div class="d-flex flex-column gap-2">
@@ -341,9 +1104,6 @@
         </div>
 
     </main>
-
-  
-{% endblock %} 
-
-   
-
+   {% block extra_js %}<script src="{% static 'js/packages.js' %}"></script>
+{% endblock %}
+{% endblock %}

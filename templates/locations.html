@@ -1,21 +1,51 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Peppe Planet - Locations{% endblock %}
-
+ {% block extra_css %}
+     <link rel="stylesheet" href="{% static 'css/locations.css' %}" />
+{% endblock %}
 {% block content %}
 
 <div class="locate-main-container">
-    <div class="location-card">
-        <h3>Locate Us</h3>
-        <p><strong>Peppe Planet</strong></p>
-                               <p> 3rd Floor, Dreams Mall, Kottiyam</p>
-        
-        <p></p>
+    <div class="location-row first-row">
 
-        <a href="https://maps.google.com/?q=Peppe+Planet+Aluva" target="_blank" class="map-btn">
-            View on Google Maps
-        </a>
+        <div class="location-card">
+            <h4>Locate Us</h4>
+            <h3>Peppe Planet</h3>
+            <p>3rd Floor, Dreams Mall,<br>Kottiyam</p>
+            <a 
+   href="https://maps.app.goo.gl/pp9V9vVTr4AJbEY76" 
+   class="map-btn" 
+   target="_blank"
+>View on Google Maps</a>
+        </div>
+
+        <div class="location-card">
+            <h4>Locate Us</h4>
+            <h3>Little Peppe</h3>
+            <p>Tamarind Rajadhani,Pulinchodu Jn.Aluva,<br>Kochi</p>
+            <a 
+   href="https://maps.app.goo.gl/BhrxWrcFYr4s11mD6" 
+   class="map-btn" 
+   target="_blank"
+>View on Google Maps</a>
+        </div>
+
+       <div class="location-card">
+    <h4>Opening Soon</h4>
+    <h3>Upcoming Peppe’s</h3>
+
+    <p class="description">
+        We’re expanding the Peppe experience to new locations!
+        Get ready for more fun, laughter, and joyful moments near you very soon.
+    </p>
+
+    <a href="#" class="map-btn">Stay Updated</a>
+</div>
+
+
     </div>
 </div>
+
 
 {% endblock %}

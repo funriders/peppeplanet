@@ -636,6 +636,9 @@ def peppe_toys(request):
 def packages(request):
     return render(request, "packages.html")
 
+def package_details(request):
+    return render(request,"package_details.html")
+
 
 def locations(request):
     return render(request, "locations.html")
@@ -695,6 +698,29 @@ def peppe_style(request):
 
 def activities_detail(request):
     return render(request, "activities_detail.html")
+
+def recover(request):
+    return render(request, "recover.html")
+
+def day_party(request):
+    return render(request, "day_party.html")
+
+def rounded_bites_birthday_party(request):
+    return render(request, "rounded_bites_birthday_party.html")
+
+def  rounded_triangles_birthday_party(request):
+    return render(request, "rounded_triangles_birthday_party.html")
+
+def  peppe_big_bang_birthday_party(request):
+    return render(request, "peppe_big_bang_birthday_party.html")
+
+def  peppe_ultimate_birthday_party(request):
+    return render(request, "peppe_ultimate_birthday_party.html")
+
+def  mini_surprise_party(request):
+    return render(request, "mini_surprise_party.html")
+
+
 
 
 # ---------- franchise (example with background email) ----------

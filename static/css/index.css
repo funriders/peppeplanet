@@ -1,0 +1,529 @@
+@media (max-width: 768px) {
+  .section {
+    margin-top: 0 !important;
+  }
+}
+.activities-container {
+  min-height: 420px;
+}
+
+@media (max-width: 576px) {
+  .activities-container {
+    min-height: auto;
+    padding: 1.25rem;
+  }
+}
+.activities-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .activities-container img {
+    max-height: 160px;
+    object-fit: contain;
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .activities-container h5 {
+    font-size: 1.1rem;
+  }
+
+  .activities-container p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .read-more {
+    font-size: 0.95rem;
+  }
+}
+/* Remove gap between navbar and banner */
+.navbar {
+  margin-bottom: 0 !important;
+}
+
+.section:first-of-type {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.hero,
+.banner,
+.carousel,
+#bannerCarousel {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body {
+  padding-top: 0 !important;
+}
+.navbar {
+  position: relative;
+}
+body {
+  padding-top: 0;
+}
+@media screen and (min-width: 1024px) {
+  .banner-slider-container {
+    position: relative;
+    top: 7rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) and (min-height: 768px) {
+  .banner-slider-container {
+    position: relative;
+    top: 5rem;
+  }
+}
+
+/* Only for desktop (1024px and above) */
+@media screen and (min-width: 1024px) {
+  .banner-slider-container {
+    position: relative;
+    margin-bottom: 80px;
+  }
+}
+.marquee-container {
+  position: relative;   /* NOT absolute */
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .marquee-container {
+    margin-top: 62px;
+  }
+}
+.marquee-container {
+  position: relative;
+  top: -30px;   /* controlled */
+  z-index: 2;
+}
+
+.banner-slider-container {
+  z-index: 1;
+}
+.banner-img {
+  height: 600px;          /* desktop */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .banner-img {
+    height: 500px;        /* ⬅ mobile height */
+  }
+}
+@media (max-width: 767.98px) {
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+  }
+  
+  .marquee-item {
+    flex-shrink: 0;
+    margin: 0 10px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    min-width: 120px;
+  }
+  
+  .marquee-item h4 {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+  }
+  
+  .marquee-item img {
+    max-height: 60px;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+/* Remove purple background on mobile */
+@media (max-width: 767.98px) {
+  .section.py-0 > div:first-child {
+    background: none !important;
+    padding: 0 !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .marquee-content {
+    display: flex;
+    animation: marquee 30s linear infinite;
+  }
+  
+  .marquee-item {
+    flex-shrink: 0;
+    margin: 0 8px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .marquee-item h4 {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .marquee-item img {
+    max-height: 50px;
+    max-width: 80px;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+/* ===== Reduce Card Overall Height ===== */
+
+/* Reduce image section height */
+.package-image-container {
+  height: 45%; /* was 55% */
+}
+
+/* Reduce content padding */
+.package-content {
+  padding: 18px; /* was 24px */
+  height: 55%;   /* was 45% */
+}
+
+/* Reduce title size slightly */
+.package-title {
+  font-size: 1.45rem; /* was 1.6rem */
+  margin-bottom: 6px;
+}
+
+/* Reduce subtitle height */
+.package-subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  min-height: auto; /* removes forced height */
+}
+
+/* Reduce price size */
+.package-price {
+  font-size: 1.7rem; /* was 2rem */
+  margin-bottom: 10px;
+}
+
+/* Compact features list */
+.package-features li {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+/* Reduce button height */
+.package-button {
+  padding: 12px 0; /* was 14px */
+  font-size: 0.85rem;
+}
+
+/* Reduce badge size */
+.package-badge {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+}
+@media (max-width: 768px) {
+  .package-image-container {
+    height: 42%;
+  }
+
+  .package-content {
+    padding: 14px;
+  }
+
+  .package-title {
+    font-size: 1.3rem;
+  }
+
+  .package-price {
+    font-size: 1.5rem;
+  }
+}
+/* ===== Brand Variables ===== */
+:root {
+  --brand: #4b0081;
+  --brand-light: #6a29b8;
+  --brand-dark: #370061;
+  --brand-bg: #f6f2fb;
+}
+
+/* ===== Package Card ===== */
+.package-card {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  box-shadow: 0 12px 28px rgba(75, 0, 129, 0.15);
+  transition: all 0.4s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--brand);
+  box-shadow: 0 28px 55px rgba(75, 0, 129, 0.3);
+}
+
+/* Active Swiper Card */
+.swiper-slide-active .package-card {
+  transform: scale(1.05);
+  box-shadow: 0 32px 65px rgba(75, 0, 129, 0.35);
+}
+
+/* ===== Image Section ===== */
+.package-image-container {
+  position: relative;
+  height: 55%;
+  overflow: hidden;
+}
+
+.package-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.package-card:hover .package-image {
+  transform: scale(1.12);
+}
+
+/* ===== Badge ===== */
+.package-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-light));
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 18px rgba(75, 0, 129, 0.4);
+  z-index: 2;
+}
+
+/* ===== Content ===== */
+.package-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+  background: #ffffff;
+}
+
+.package-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--brand-dark);
+  margin-bottom: 8px;
+}
+
+.package-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 14px;
+  min-height: 42px;
+}
+
+/* ===== Price ===== */
+.package-price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--brand);
+  margin-bottom: 14px;
+}
+
+.package-price span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #777;
+}
+
+/* ===== Features ===== */
+.package-features {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.package-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.package-features i {
+  color: var(--brand);
+  margin-top: 3px;
+}
+
+/* ===== Button ===== */
+.package-button {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand), var(--brand-light));
+  border: 2px solid var(--brand);
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(75, 0, 129, 0.4);
+}
+
+.package-button:hover {
+  background: #ffffff;
+  color: var(--brand);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(75, 0, 129, 0.45);
+}
+
+/* ===== Swiper Pagination ===== */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: var(--brand);
+  opacity: 0.35;
+  transition: 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+/* ===== Swiper Arrows ===== */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 50%;
+  color: var(--brand) !important;
+  box-shadow: 0 6px 18px rgba(75, 0, 129, 0.3);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .package-title {
+    font-size: 1.4rem;
+  }
+
+  .package-price {
+    font-size: 1.7rem;
+  }
+}
+/* ===== Ensure Swiper Arrows Are Visible ===== */
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 999 !important;
+  pointer-events: auto;
+}
+
+/* Make sure card overlays don't block arrows */
+.package-card::before,
+.package-card::after,
+.package-image-container::after {
+  pointer-events: none;
+}
+/* Add to your index.css */
+
+/* Reset excessive margins/padding for mobile */
+@media (max-width: 768px) {
+  /* Fix navbar to banner spacing */
+  main {
+    padding-top: 0 !important;
+  }
+  
+  /* Reduce all section spacing on mobile */
+  .section {
+    padding: 2rem 0 !important;
+  }
+  
+  /* Fix the carousel container */
+  #bannerCarousel {
+    margin-top: 0 !important;
+  }
+  
+  /* Reduce the negative margin on activities section */
+  .section[style*="margin-top: -6rem"] {
+    margin-top: -2rem !important;
+  }
+  
+  /* Adjust the image position in about section */
+  .scrollanimation.animated.fadeInRight img {
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 1.5rem !important;
+  }
+}
+/* Mobile (default) */
+.marquee-container {
+  margin-top: -30px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .marquee-container {
+    margin-top: 40px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .marquee-container {
+    margin-top: 62px;
+  }
+}

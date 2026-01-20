@@ -1,0 +1,537 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Peppe Planet - Package Detail{% endblock %}
+
+{% block content %}
+<!-- Main -->
+<main>
+    <!-- Banner -->
+    <!--<div class="section position-relative bg-attach-cover"
+        style="background-image: url({% static 'image/BG10.png' %}); padding-bottom: 25rem; padding-top: 5rem;">
+        <div class="r-container">
+            <div class="row row-cols-xl-2 row-cols-1">
+                <div class="col mb-3 scrollanimation animated zoomIn">
+                    <div class="d-flex flex-column gap-3 justify-content-center h-100">
+                        <h6 class="brush1 accent-color-2 w-max-content">Package Detail</h6>
+                        <h1>Discover the <span class="accent-color fw-bold">Details</span> of Our Programs</h1>
+                        <p style="max-width: 600px;">
+                           Make every celebration unforgettable with our exciting party packages,
+                filled with games, laughter, and happy memories for kids.
+                        </p>
+                    </div>
+                </div>
+                <div class="col mb-3 scrollanimation animated pulse">
+                    <img src="{% static 'image/dummy-img-600x600.jpg' %}" class="img-fluid" alt="Program banner">
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+ <!-- Section Learning Program Details -->
+<div class="section" style="padding-top: 8rem;">
+    <div class="r-container d-flex flex-column gap-3">
+        <div class="row row-cols-xl-2 row-cols-1">
+            <div class="col col-xl-8 mb-3 scrollanimation animated fadeInLeft">
+                <!-- Package Overview Section (Replacing the image) -->
+                <div class="d-flex flex-column gap-3 p-4 rounded-3 bg-light border">
+                    <h3>Package Overview</h3>
+                    <p class="lead">
+                       Includes 3 hours Party Hall, Play Time & Food (Min 40 people)
+                    </p>
+                    
+                    <!-- Two-column layout for inclusions -->
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col-md-6">
+                            <!-- Rate Section Above Food Inclusions -->
+                            <div class="rate-section mb-4 pb-3 border-bottom">
+                                <div class="text-center">
+                                    <h5 class="accent-color mb-2">Package Rate</h5>
+                                    <!-- Updated price with custom color and smaller size -->
+                                    <div class="fw-bold mb-2" style="font-size: 3rem; color: #4b0081;">₹1499</div>
+                                    <p class="text-muted mb-3">per head (inclusive of all taxes)</p>
+                                    
+                                    <!-- Book Now Button -->
+                                    <div class="w-max-content mx-auto">
+                                        <a href="{% url 'get_in_touch' %}"
+                                           class="btn btn-accent d-flex flex-row rounded-pill gap-2 ps-4 pe-1 py-2 justify-content-between">
+                                            <span>Book Now</span>
+                                            <div class="icon-box">
+                                                <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Food Inclusions Below Rate Section -->
+                            <div class="food-inclusions-division">
+                                <h5 class="accent-color">Food Inclusions</h5>
+                                <ul class="text-color-2 ps-0 d-flex flex-column gap-2">
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Buffer Lunch</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Starters</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Main Course</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Desserts</span>
+                                        </div>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column - Other Inclusions -->
+                        <div class="col-md-6">
+                            <div class="other-inclusions-division">
+                                <h5 class="accent-color">Other Inclusions</h5>
+                                <ul class="text-color-2 ps-0 d-flex flex-column gap-2">
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Party Hall</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Play Area</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Themed Decoration inside party hall</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Surprise Gift</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Birthday Cap</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Birthday Goggle</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Confetti Popper</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Cake Cutting Table</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Chairs</span>
+                                            
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Birthday Invitation E-Card</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Sound & Mic</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Small Stage</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row gap-3 align-items-center">
+                                            <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color"></i>
+                                            <span>Disco light</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Entertainment Add-ons Button -->
+                    <div class="text-center mt-4 pt-3 border-top">
+                        <div class="w-max-content mx-auto">
+                            <a href="#entertainment-addons"
+                               class="btn d-flex flex-row rounded-pill gap-2 ps-4 pe-1 py-2 justify-content-between"
+                               style="background-color: #4b0081; color: white; border: none;">
+                                <span>Entertainment Add-ons</span>
+                                <div class="icon-box">
+                                    <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">
+                            <i class="fas fa-plus-circle me-1"></i> Enhance your party with special characters, magicians, dancers & more!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+           
+      
+        
+        
+            <div class="col col-xl-4 mb-3 scrollanimation animated fadeInRight">
+                <div class="d-flex flex-column gap-3 p-5 rounded-3 bg-accent">
+                    <h4 class="brush1 w-max-content" style="z-index: 1;">Our Packages</h4>
+                     <ul class="list-group gap-3">
+            <li class="list-group-item border-0 p-0">
+                <a href="{% url 'day_party' %}"
+                   class="link d-flex flex-row align-items-center gap-3 {% if request.resolver_match.url_name == 'day_party' %}active{% endif %}">
+                    <div class="icon-box project">
+                        <i class="rtmicon rtmicon-chevron-right fs-6 fw-semibold"></i>
+                    </div>
+                    <h5>365 <sup>th</sup> Day Party</h5>
+                </a>
+            </li>
+
+            <li class="list-group-item border-0 p-0">
+                <a href="{% url 'rounded_bites_birthday_party' %}"
+                   class="link d-flex flex-row align-items-center gap-3 {% if request.resolver_match.url_name == 'rounded_bites_birthday_party' %}active{% endif %}">
+                    <div class="icon-box project">
+                        <i class="rtmicon rtmicon-chevron-right fs-6 fw-semibold"></i>
+                    </div>
+                    <h5>Rounded Bites Birthday Party</h5>
+                </a>
+            </li>
+            <li class="list-group-item border-0 p-0">
+                <a href="{% url 'rounded_triangles_birthday_party' %}"
+                   class="link d-flex flex-row align-items-center gap-3 {% if request.resolver_match.url_name == 'rounded_triangles_birthday_party' %}active{% endif %}">
+                    <div class="icon-box project">
+                        <i class="rtmicon rtmicon-chevron-right fs-6 fw-semibold"></i>
+                    </div>
+                    <h5>Rounded Triangles Birthday Party</h5>
+                </a>
+            </li>
+
+            <li class="list-group-item border-0 p-0">
+                <a href="{% url 'peppe_ultimate_birthday_party' %}"
+                   class="link d-flex flex-row align-items-center gap-3 {% if request.resolver_match.url_name == 'peppe_ultimate_birthday_party' %}active{% endif %}">
+                    <div class="icon-box project">
+                        <i class="rtmicon rtmicon-chevron-right fs-6 fw-semibold"></i>
+                    </div>
+                    <h5>Peppe Ultimate Birthday Party</h5>
+                </a>
+            </li>
+
+            <li class="list-group-item border-0 p-0">
+                <a href="{% url 'peppe_big_bang_birthday_party' %}"
+                   class="link d-flex flex-row align-items-center gap-3 {% if request.resolver_match.url_name == 'peppe_big_bang_birthday_party' %}active{% endif %}">
+                    <div class="icon-box project">
+                        <i class="rtmicon rtmicon-chevron-right fs-6 fw-semibold"></i>
+                    </div>
+                    <h5>Peppe Big Bang Birthday Party</h5>
+                </a>
+            </li>
+
+            
+
+            <li class="list-group-item border-0 p-0">
+                <a href="{% url 'mini_surprise_party' %}"
+                   class="link d-flex flex-row align-items-center gap-3 {% if request.resolver_match.url_name == 'mini_surprise_party' %}active{% endif %}">
+                    <div class="icon-box project">
+                        <i class="rtmicon rtmicon-chevron-right fs-6 fw-semibold"></i>
+                    </div>
+                    <h5>Mini Surprise Party</h5>
+                </a>
+            </li>
+        </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Entertainment Add-ons Section -->
+        <div class="entertainment-addons-section mt-4" id="entertainment-addons">
+            <div class="d-flex flex-column gap-3 p-4 rounded-3 bg-light border">
+                <h3 class="text-center mb-4"> Entertainment Add-ons to the Party</h3>
+                <p class="text-center lead mb-4">Make your celebration extra special with these exciting add-ons!</p>
+                
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <!-- Special Characters -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-mask fa-3x accent-color"></i>
+                                </div>
+                                <h5 class="card-title accent-color">Special Characters</h5>
+                                <p class="card-text">Bring your child’s favorite characters to life with special appearances by Spiderman, Mickey Mouse, Tom & Jerry, and more!</p>
+                                <ul class="list-unstyled">
+                                    <!--<li>🕷️ Spiderman</li>
+                                    <li>🐭 Mickey Mouse</li>
+                                    <li>🐱🐭 Tom & Jerry</li>
+                                    <li>👸 Disney Princesses</li>
+                                    <li>🦸‍♂️ Superheroes</li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Magician -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-hat-wizard fa-3x accent-color"></i>
+                                </div>
+                                <h5 class="card-title accent-color">Magician</h5>
+                                <p class="card-text">Experience the wonder of magic with our professional magician who will amaze both kids and adults with incredible tricks and illusions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dancers -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-child fa-3x accent-color"></i>
+                                </div>
+                                <h5 class="card-title accent-color">Dancers</h5>
+                                <p class="card-text">Get everyone on their feet with energetic dance performances and fun dance-along sessions for kids of all ages.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Singers -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-microphone-alt fa-3x accent-color"></i>
+                                </div>
+                                <h5 class="card-title accent-color">Singers</h5>
+                                <p class="card-text">Live singing performances with popular children's songs, birthday melodies, and interactive singing sessions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Live Painting -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-paint-brush fa-3x accent-color"></i>
+                                </div>
+                                <h5 class="card-title accent-color">Live Painting</h5>
+                                <p class="card-text">Watch a beautiful artwork come to life during the party! The finished painting makes a perfect keepsake.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Package -->
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <i class="fas fa-star fa-3x accent-color"></i>
+                                </div>
+                                <h5 class="card-title accent-color">Custom Package</h5>
+                                <p class="card-text">Mix and match any add-ons to create your perfect party combination!</p>
+                                <div class="mt-3">
+                                    <a href="{% url 'get_in_touch' %}" class="btn btn-accent rounded-pill px-4">
+                                        <i class="fas fa-phone-alt me-2"></i>Enquire Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <p class="mb-0 text-muted">
+                        <i class="fas fa-info-circle me-2"></i>
+                        All add-ons are available at additional charges. Contact us for pricing and availability.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Terms & Conditions Section -->
+        <div class="terms-conditions-section mt-4">
+            <div class="d-flex flex-column gap-3 p-4 rounded-3 bg-light border">
+                <h3 class="text-center mb-4">
+                    <span class="brush1" style="z-index: 1;">Terms & Conditions</span>
+                    <br>
+                    <small class="text-muted"></small>
+                </h3>
+                
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="terms-list">
+                            <ul class="text-color-2 ps-0 d-flex flex-column gap-3">
+                                <!-- Terms using same bullet icon design as food inclusions -->
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>No additional Charges for Party Hall or Play area.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>Birthday cakes are not provided by Peppe. The cake must be arranged and brought by the client. If needed we can connect you with nearby cake shops.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>Socks are mandatory inside the play area. Please bring your own socks or the socks can be purchased at the reception counter.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>Consumption or possession of alcohol, cigarettes or tobacco products is strictly prohibited.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>The "Mini Surprise Party" doesn't include a party hall.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>The booking amount for the birthday party will be 20% which is non-refundable in case of cancellation.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>The remaining amount to be made 2 days before the party.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>Minimum guaranteed pax have to be confirmed at least 2 days before the party.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>No other outside food item other than cake will be allowed.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex flex-row gap-3 align-items-start">
+                                        <i class="rtmicon rtmicon-cloud-check-145 fs-4 accent-color mt-1"></i>
+                                        <span>Customized party options are also available based on the additional requirements.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <div class="w-max-content mx-auto">
+                                <a href="{% url 'get_in_touch' %}"
+                                   class="btn btn-accent d-flex flex-row rounded-pill gap-2 ps-4 pe-1 py-2 justify-content-between">
+                                    <span>Contact for Custom Packages</span>
+                                    <div class="icon-box">
+                                        <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        <!-- Social Media Section -->
+        <div class="d-flex flex-column gap-3">
+            <div class="d-flex flex-xl-row flex-column gap-3 align-items-center">
+                <h5 class="accent-color m-0">Follow Us:</h5>
+                <div class="social-container gap-3">
+                    <a href="https://www.facebook.com" class="social-item-2" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-xs fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" class="social-item-2" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-xs fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com" class="social-item-2" target="_blank" rel="noopener">
+                      <i class="fa-brands fa-x-twitter fa-xs"></i>
+
+                    </a>
+                    <a href="https://www.youtube.com" class="social-item-2" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-xs fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Section CTA -->
+     <!-- Section CTA -->
+      <div class="section scrollanimation animated zoomIn">
+        <div class="r-container">
+          <div class="bg-accent-color p-5 rounded-5">
+            <div class="row row-cols-xl-2 row-cols-1 align-items-center">
+              <div class="col mb-xl-0 mb-3">
+                <img src="{% static 'image/homefooterimg2.jpg' %}" class="img-fluid rounded-5" alt="" style="height:400px width=600px">
+
+              </div>
+              <div class="col mb-xl-0 mb-3">
+                <div class="d-flex flex-column gap-3">
+                  <h3 class="accent-color-primary">
+                    Reach Out & Discover the Magic of
+                    <span class="accent-color-2 fw-bold">Peppe Planet</span> 
+                    
+                  </h3>
+                  <p class="accent-color-primary">
+                   Peppe Planet brings together interactive games, hands-on learning, and imaginative adventures to make every visit unforgettable for kids.
+                  </p>
+                  <div class="w-max-content">
+    <a href="{% url 'get_in_touch' %}"
+        class="btn btn-accent-outline-white d-flex flex-row rounded-pill gap-2 ps-4 pe-1 py-1 justify-content-between">
+        <span>Get in Touch</span>
+        <div class="icon-box-3" style="transform: rotate(0deg);">
+            <i class="rtmicon rtmicon-classic-phone"></i>
+        </div>
+    </a>
+</div>
+
+</main>
+{% endblock %}

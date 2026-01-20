@@ -289,4 +289,18 @@ $(function () {
 
 
 
+// Auto slide configuration
+document.addEventListener('DOMContentLoaded', function() {
+  var bannerCarousel = document.getElementById('bannerCarousel');
+  if (bannerCarousel) {
+    var carousel = new bootstrap.Carousel(bannerCarousel, {
+      interval: 4000, // Change every 4 seconds
+      wrap: true,
+      pause: 'hover',
+      keyboard: true,
+      touch: true
+    });
+  }
+});
+
 
