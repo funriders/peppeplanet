@@ -36,11 +36,11 @@ urlpatterns = [
     path('_send_two_emails_in_background', views._send_two_emails_in_background, name='_send_two_emails_in_background'),
     path('day_party/', views.day_party, name='day_party'),
     path('recover/', views.recover, name='recover'),
-    path('rounded_bites_birthday_party', views.rounded_bites_birthday_party, name='rounded_bites_birthday_party'),
-    path('peppe_ultimate_birthday_party', views.peppe_ultimate_birthday_party, name='peppe_ultimate_birthday_party'),
-    path('peppe_big_bang_birthday_party', views.peppe_big_bang_birthday_party, name='peppe_big_bang_birthday_party'),
-    path('rounded_triangles_birthday_party', views.rounded_triangles_birthday_party, name='rounded_triangles_birthday_party'),
-    path('mini_surprise_party', views.mini_surprise_party, name='mini_surprise_party'),
+    path('rounded_bites_birthday_party/', views.rounded_bites_birthday_party, name='rounded_bites_birthday_party'),
+    path('peppe_ultimate_birthday_party/', views.peppe_ultimate_birthday_party, name='peppe_ultimate_birthday_party'),
+    path('peppe_big_bang_birthday_party/', views.peppe_big_bang_birthday_party, name='peppe_big_bang_birthday_party'),
+    path('rounded_triangles_birthday_party/', views.rounded_triangles_birthday_party, name='rounded_triangles_birthday_party'),
+    path('mini_surprise_party/', views.mini_surprise_party, name='mini_surprise_party'),
     
    
    

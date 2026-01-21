@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Body margin top:', document.body.style.marginTop);
   }
 });
-<script>
+
 // Force spacing with JavaScript (runs immediately)
 (function() {
     const banner = document.getElementById('main-banner');
@@ -48,4 +48,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 })();
-</script>

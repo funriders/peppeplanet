@@ -527,3 +527,16 @@ body {
     margin-top: 62px;
   }
 }
+/* Desktop only */
+@media (min-width: 992px) {
+  .desktop-space {
+    height: 0rem; /* same as <br><br> */
+  }
+}
+
+/* Mobile & tablet */
+@media (max-width: 991px) {
+  .desktop-space {
+    display: none;
+  }
+}

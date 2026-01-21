@@ -1401,12 +1401,12 @@ img.rotate {
 
 .swiper-button-next.accent {
     right: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
 }
 
 .swiper-button-prev.accent {
     left: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
 }
 
 .swiper-button-next.accent2,
@@ -1440,12 +1440,12 @@ img.rotate {
 /* Center the buttons horizontally */
 .swiperStep2 .swiper-button-next {
     right: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
 }
 
 .swiperStep2 .swiper-button-prev {
     left: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
 }
 
 .mySwiper .swiper-button-next,
