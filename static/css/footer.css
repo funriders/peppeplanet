@@ -1,0 +1,29 @@
+.social-wrapper {
+  background-color: #4b0081; /* outer area */
+  padding: 20px;             /* 👈 outer padding */
+}
+
+.social-section {
+  background-color: #4b0081;
+  border: 2px solid #ffffff;
+  border-radius: 14px;
+  padding: 20px 24px;        /* inner padding */
+}
+.copyright-section {
+  background-color: #4b0081;
+  color: #ffffff;
+  border: 2px solid #ffffff;   /* 👈 white outer border */
+  border-radius: 14px;         /* 👈 rounded corners */
+  padding: 32px 48px;
+  min-height: 80px;
+  display: flex;
+   align-items: center;
+  justify-content: center;
+}
+
+.copyright-wrapper {
+  background-color: #4b0081;
+  padding: 20px;               /* 👈 outer size */
+}
+
+

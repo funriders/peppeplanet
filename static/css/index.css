@@ -540,3 +540,13 @@ body {
     display: none;
   }
 }
+@keyframes marquee-mobile {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Remove ALL possible spacing */
+.d-block.d-md-none * {
+  margin: 0 !important;
+  line-height: 1 !important;
+}
