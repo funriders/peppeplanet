@@ -37,6 +37,7 @@
 @import url('../css/vendor/bubblegum-sans/stylesheet.css');
 @import url('../css/vendor/inter/stylesheet.css');
 
+
 /* ===== MOBILE ONLY STYLES ===== */
 @media (max-width: 767.98px) {
 
@@ -6711,3 +6712,4 @@ section + section {
 .marquee-container:hover .marquee-content {
   animation-play-state: paused;
 }
+

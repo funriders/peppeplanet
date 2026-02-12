@@ -7,44 +7,56 @@
 {% block content %}
 
 <div class="locate-main-container">
+
+    <!-- ===== CURRENT LOCATIONS ===== -->
+    <h2 class="location-section-title">Current Locations</h2>
+
     <div class="location-row first-row">
 
         <div class="location-card">
             <h4>Locate Us</h4>
             <h3>Peppe Planet</h3>
             <p>3rd Floor, Dreams Mall,<br>Kottiyam</p>
-            <a 
-   href="https://maps.app.goo.gl/pp9V9vVTr4AJbEY76" 
-   class="map-btn" 
-   target="_blank"
->View on Google Maps</a>
+            <a href="https://maps.app.goo.gl/pp9V9vVTr4AJbEY76" 
+               class="map-btn" 
+               target="_blank">
+               View on Google Maps
+            </a>
         </div>
 
         <div class="location-card">
             <h4>Locate Us</h4>
             <h3>Little Peppe</h3>
-            <p>Tamarind Rajadhani,Pulinchodu Jn.Aluva,<br>Kochi</p>
-            <a 
-   href="https://maps.app.goo.gl/BhrxWrcFYr4s11mD6" 
-   class="map-btn" 
-   target="_blank"
->View on Google Maps</a>
+            <p>Tamarind Rajadhani, Pulinchodu Jn, Aluva,<br>Kochi</p>
+            <a href="https://maps.app.goo.gl/BhrxWrcFYr4s11mD6" 
+               class="map-btn" 
+               target="_blank">
+               View on Google Maps
+            </a>
         </div>
 
-       <div class="location-card">
-    <h4>Opening Soon</h4>
-    <h3>Upcoming Peppe’s</h3>
+    </div>
 
-    <p class="description">
-        We’re expanding the Peppe experience to new locations!
-        Get ready for more fun, laughter, and joyful moments near you very soon.
-    </p>
 
-    <a href="#" class="map-btn">Stay Updated</a>
-</div>
+    <!-- ===== OPENING SOON ===== -->
+    <h2 class="location-section-title">Opening Soon</h2>
 
+    <div class="location-row">
+
+        <div class="location-card">
+            <h4>Coming Soon</h4>
+            <h3>Upcoming Peppe’s</h3>
+
+            <p class="description">
+                We’re expanding the Peppe experience to new locations!  
+                Get ready for more fun, laughter, and joyful moments near you very soon.
+            </p>
+
+            <a href="{%url 'get_in_touch' %}" class="map-btn">Stay Updated</a>
+        </div>
 
     </div>
+
 </div>
 
 

@@ -121,3 +121,19 @@
     color: #2a0146;
     margin-bottom: 10px;
 }
+.location-section-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 900;
+    color: #4b0081;
+    margin: 70px 0 35px;
+    position: relative;
+}
+
+.location-section-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 900;
+    color: #4b0081;
+    margin: 70px 0 35px;
+}

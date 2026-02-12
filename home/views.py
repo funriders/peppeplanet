@@ -720,12 +720,21 @@ def  peppe_ultimate_birthday_party(request):
 def  mini_surprise_party(request):
     return render(request, "mini_surprise_party.html")
 
+def  index_recover(request):
+    return render(request, "index_recover.html")
+
+
 
 
 
 # ---------- franchise (example with background email) ----------
 def franchise(request):
     if request.method == "POST":
+
+        # 🔒 Honeypot check (ADD THIS)
+        if request.POST.get("company"):
+            return render(request, "franchise.html")
+
         name = (request.POST.get("name") or "").strip()
         email = (request.POST.get("email") or "").strip()
         phone = (request.POST.get("phone") or "").strip()
@@ -736,7 +745,11 @@ def franchise(request):
         admin_body = f"Name: {name}\nEmail: {email}\nPhone: {phone}\n\n{message_text}"
 
         user_subject = "Thank you for contacting Peppe Planet"
-        user_body = f"Hi {name},\n\nThanks for contacting us. We'll get back to you soon.\n\nRegards,\nPeppe Planet Team"
+        user_body = (
+            f"Hi {name},\n\n"
+            "Thanks for contacting us. We'll get back to you soon.\n\n"
+            "Regards,\nPeppe Planet Team"
+        )
 
         try:
             threading.Thread(
@@ -745,14 +758,21 @@ def franchise(request):
                       user_subject, user_body, [email]),
                 daemon=True,
             ).start()
-            messages.success(request, "Your message has been sent successfully. We will contact you soon.")
+            messages.success(
+                request,
+                "Your message has been sent successfully. We will contact you soon."
+            )
         except Exception:
             logger.exception("Franchise email dispatch failed")
-            messages.error(request, "Something went wrong while sending your message.")
+            messages.error(
+                request,
+                "Something went wrong while sending your message."
+            )
 
         return render(request, "franchise.html")
 
     return render(request, "franchise.html")
+
 
 
 # ---------- contact/get_in_touch (AJAX-friendly) ----------
@@ -764,6 +784,10 @@ def get_in_touch(request):
     If GET: renders the page.
     """
     if request.method == "POST":
+
+        # 🔒 Honeypot check (ADD THIS)
+        if request.POST.get("company"):
+            return JsonResponse({"status": "ok"})
         name = (request.POST.get("name") or "").strip()
         email = (request.POST.get("email") or "").strip()
         phone = (request.POST.get("phone") or "").strip()
@@ -811,3 +835,4 @@ def get_in_touch(request):
 
     # GET
     return render(request, "get_in_touch.html")
+

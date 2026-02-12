@@ -197,102 +197,71 @@
      style="background-image: url('{% static 'image/BG1.png' %}');
             padding-bottom: 25rem; padding-top: 5rem;">-->
 <!--<div>-->
-  <!-- Sliding Banner Images -->
+ <!-- FULL WIDTH BANNER -->
+<div class="container-fluid p-0">
+
   <div class="banner-slider-container">
     <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner rounded-4 overflow-hidden" style="max-width: 2100px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
-        
-        <!-- Banner 1 -->
+
+      <div class="carousel-inner overflow-hidden shadow-lg">
+
+        <!-- Slide 1 -->
         <div class="carousel-item active">
-        <img src="{% static 'image/banner-3-g.png' %}"
-     class="d-block w-100 banner-img"
-     alt="Banner image">
+          <img src="{% static 'image/banner-1.png' %}" class="d-block banner-img" alt="Banner 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Cage Full Of Happiness</h3>
+            <p style='color:white;'>Peppe Planet - Something More Than Happiness</p>
+          </div>
+        </div>
 
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="{% static 'image/banner-2.png' %}" class="d-block banner-img" alt="Banner 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Complete Family Entertainment Centre</h3>
+            <p style='color:white;'>Peppe Planet - Something More Than Happiness</p>
+          </div>
+        </div>
 
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Unleash Your Imagination</h3>
-            <p style="color:white">Where creativity meets endless fun</p>
-          </div>
-        </div>
-        
-        <!-- Banner 2 -->
+        <!-- Slide 3 -->
         <div class="carousel-item">
-          <img src="{% static 'image/banner-f-1.png' %}" 
-              class="d-block w-100 banner-img" alt="">
+          <img src="{% static 'image/banner-3.png' %}" class="d-block banner-img" alt="Banner 3">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Family Bonding Time</h3>
-            <p style="color:white">Create memories that last forever</p>
+            <h3>Fun & Smile in Each Corner</h3>
+            <p style='color:white;'>Peppe Planet - Something More Than Happiness</p>
           </div>
         </div>
-        
-        <!-- Banner 3 -->
-        <div class="carousel-item">
-          <img src="{% static 'image/banner-1.png' %}" 
-              img class="d-block w-100 banner-img" alt="">
+
+        <!-- Slide 4 -->
+        <!--<div class="carousel-item">
+          <img src="{% static 'image/banner-4.png' %}" class="d-block banner-img" alt="Banner 4">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Adventure Awaits</h3>
-            <p style="color:white">Thrilling activities for all ages</p>
+            <h3>Something More Than Happiness</h3>
+            <p style='color:white;'>Peppe Planet</p>
           </div>
-        </div>
-        
-        <!-- Banner 4 -->
-        <div class="carousel-item">
-          <img src="{% static 'image/banner-1-g.png' %}" 
-              img class="d-block w-100 banner-img" alt="">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Celebrate With Us</h3>
-            <p style="color:white">Themed parties & special events</p>
-          </div>
-        </div>
+        </div>-->
+
       </div>
-      
-      <!-- Carousel Controls -->
+
+      <!-- Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="carousel-control-prev-icon"></span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="carousel-control-next-icon"></span>
       </button>
-      
+
       <!-- Indicators -->
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+        <!--<button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3"></button>-->
       </div>
+
     </div>
   </div>
 
-  <div class="r-container position-relative">
-    <div class="d-flex flex-column gap-3 align-items-center justify-content-center text-center mx-auto scrollanimation animated zoomIn"
-         style="max-width: 700px">
-
-      <!-- Removed the single web image as requested -->
-
-      <div class="hero-heading">
-        <!--<h3 style="color:#4B0081;">Something More Than</h3>-->
-        <!--<h1><strong style="color:#4B0081;">Happiness</strong></h1>-->
-      </div>
-
-      <!--<p style="max-width:600px">
-        A next–generation indoor Family Entertainment Centre where kids, teens and adults enjoy
-        gadget-free play, thrilling activities, themed parties, cafe treats and endless memories –
-        all under one colourful roof.
-      </p>-->
-
-      <!--<a href="{% url 'about' %}"
-         class="btn btn-accent d-flex align-items-center gap-2 rounded-pill ps-4 pe-1 py-1">
-        <span class="mx-auto">Welcome to Peppe Planet</span>
-        <div class="icon-box">
-          <i class="rtmicon rtmicon-arrow-up-right"></i>-->
-        </div>
-      </a>
-
-    </div>
-  </div>
 </div>
 
 <div class="section py-0">
@@ -901,7 +870,10 @@ with a play and party concept.</p>
         <div class="overflow-hidden">
             <div class="padding-swiper">
                 <div class="swiper swiperCard px-2 scrollanimation animated fadeInDown">
-                    <!-- Additional required wrapper -->
+             <div class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center scrollanimation animated zoomIn"
+                    style="max-width: 700px;">
+                    <h6 class="brush1 accent-color-2" style="width: max-content;"> Peppe Also Has</h6></div>
+                      <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide mt-2">
@@ -1548,7 +1520,7 @@ need.</p>
       </div> {% endcomment %}
 
       <!-- Section Partner -->
-      <div class="section">
+      <!--<div class="section">
         <div class="r-container">
           <div
             class="d-flex flex-column gap-3 text-center align-items-center justify-content-center mx-auto"
@@ -1561,9 +1533,9 @@ need.</p>
               <div class="position-relative" style="padding-inline: 5rem">
                 <div
                   class="swiper swiperPartner scrollanimation animated fadeInDown"
-                >
+                >-->
                   <!-- Additional required wrapper -->
-                  <div class="swiper-wrapper">
+                  <!--<div class="swiper-wrapper">
                     <div class="swiper-slide p-0">
                       <div class="partner">
                        <img src="{% static 'image/Logo-1.png' %}" class="img-fluid" alt="image">
@@ -1607,9 +1579,9 @@ need.</p>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>-->
                 <!-- Navigation arrows (on top of everything) -->
-                <div
+                <!--<div
                   class="swiper-button-next accent2"
                   style="z-index: 2"
                 ></div>
@@ -1621,7 +1593,7 @@ need.</p>
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
 
       <!-- Section Why Choose Us -->
      {% comment %} <div
@@ -1849,7 +1821,7 @@ need.</p>
 
 
 
- <div class="section py-0">
+ <!--<div class="section py-0">
             <div class="r-container">
                 <div class="d-flex flex-column gap-3 text-center align-items-center justify-content-center mx-auto">
                     <div class="marquee-container">
@@ -1970,7 +1942,7 @@ need.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         {% comment %} <div class="section py-0">
             <div class="r-container">
                 <div class="d-flex flex-column gap-3 text-center align-items-center justify-content-center mx-auto">
@@ -2503,7 +2475,7 @@ need.</p>
       </div>{% endcomment %}
 
 
-       <div class="section">
+       <!--<div class="section">
             <div class="r-container d-flex flex-column gap-4">
                 <div class="row row-cols-xl-2 row-cols-1 align-items-center">
                     <div class="col col-xl-5 mb-3 scrollanimation animated fadeInLeft">
@@ -2530,10 +2502,10 @@ need.</p>
 
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <!-- Example posts -->
-                <div class="row row-cols-xl-2 row-cols-1">
+                <!--<div class="row row-cols-xl-2 row-cols-1">
                     <div class="col mb-3 scrollanimation animated fadeInLeft">
                         <div class="d-flex flex-column gap-4 position-relative">
                             <div class="position-absolute top-0 start-0 px-3 py-1 bg-accent-color-2 rounded-2"
@@ -2655,7 +2627,7 @@ need.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 
     </main> 

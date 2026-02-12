@@ -153,6 +153,7 @@
 
                                             <form method="post" action="{% url 'franchise' %}"
                                                 class="d-flex flex-column contact h-100 justify-content-center w-100 form">
+                                                <input type="text" name="company" tabindex="-1" autocomplete="off" style="display:none">
 
                                                 {% csrf_token %}
 
