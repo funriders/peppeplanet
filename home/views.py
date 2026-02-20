@@ -723,6 +723,11 @@ def  mini_surprise_party(request):
 def  index_recover(request):
     return render(request, "index_recover.html")
 
+def  peppe_ultimate(request):
+    return render(request, "peppe_ultimate.html")
+
+
+
 
 
 

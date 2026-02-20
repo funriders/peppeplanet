@@ -42,6 +42,7 @@ urlpatterns = [
     path('rounded_triangles_birthday_party/', views.rounded_triangles_birthday_party, name='rounded_triangles_birthday_party'),
     path('mini_surprise_party/', views.mini_surprise_party, name='mini_surprise_party'),
     path('index_recover/', views.index_recover, name='index_recover'),
+    path('peppe_ultimate/', views.peppe_ultimate, name='peppe_ultimate'),
     
    
    
