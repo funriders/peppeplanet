@@ -2,7 +2,8 @@
 {% load static %}
 {% block title %}Peppe Planet - Packages{% endblock %}
  {% block extra_css %}
- <link rel="stylesheet" href="{% static 'css/packages.css' %}" /> {% endblock %}
+ <link rel="stylesheet" href="{% static 'css/packages.css' %}" />
+ {% endblock %}
 
 {% block content %}
 
@@ -168,13 +169,13 @@ Birthday Party
                     </div>
                 </div>
             </div>-->
-            <div class="container py-5">
-<div class="row g-4">
+           <div class="container py-5">
+<div class="custom-card-grid">
 
 <!-- 1 -->
-<div class="col-lg-4 col-md-6">
+<div class="col">
 <div class="package-card">
-<img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620">
+<img src="{% static 'image/package-1.png' %}">
 <div class="card-content">
   <div>
     <div class="package-title">Peppe Ultimate</div>
@@ -183,142 +184,152 @@ Birthday Party
   <div class="price">₹59999</div>
 </div>
 <div class="card-overlay">
-<h5>Know more about this package</h5>
-<!--<ul>
-<li>Party Hall & Play Area</li>
-<li>Welcome Drink, Sandwich</li>
-<li>French Fries, Ice Cream</li>
-<li>Minimal Decoration</li>
-<li>Surprise Gift & Disco Light</li>
-</ul>-->
-<a href="{% url 'peppe_ultimate' %}" class="know-more-btn">See Full Details</a>
+    <div style="text-align:center;">
+        Know more about this package
+    </div>
+
+    <a href="{% url 'peppe_ultimate' %}" class="know-more-btn">
+        See Full Details
+    </a>
 </div>
 </div>
 </div>
 
 <!-- 2 -->
-<div class="col-lg-4 col-md-6">
+<div class="col">
 <div class="package-card">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<img src="{% static 'image/package-3.png' %}">
 <div class="card-content">
   <div>
-    <div class="package-title">Rounded Bites Party</div>
-    <small>3 Hours • Min 12 Pax</small>
+    <div class="package-title">Diamond</div>
+    <small>4 Hours • 24 Pax</small>
   </div>
-  <div class="price">₹699</div>
+  <div class="price">₹36999</div>
 </div>
 <div class="card-overlay">
-<h5>Includes</h5>
-<ul>
-<li>Burger (Veg/Non-Veg)</li>
-<li>French Fries & Ice Cream</li>
-<li>Party Hall & Play Area</li>
-<li>Birthday Cap & Goggles</li>
-<li>Sound, Mic & Stage</li>
-</ul>
-<a href="/rounded_bites_birthday_party/" class="know-more-btn">Know More</a>
+    <div style="text-align:center;">
+        Know more about this package
+    </div>
+
+    <a href="{% url 'diamond' %}" class="know-more-btn">
+        See Full Details
+    </a>
 </div>
 </div>
 </div>
 
 <!-- 3 -->
-<div class="col-lg-4 col-md-6">
+<div class="col">
 <div class="package-card">
-<img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf">
+<img src="{% static 'image/package-5.png' %}">
 <div class="card-content">
   <div>
-    <div class="package-title">Rounded Triangles Party</div>
-    <small>3 Hours • Min 12 Pax</small>
+    <div class="package-title">Platinum</div>
+    <small>3 Hours • 24 Pax</small>
   </div>
-  <div class="price">₹999</div>
+  <div class="price">₹29999</div>
 </div>
 <div class="card-overlay">
-<h5>Includes</h5>
-<ul>
-<li>Small Pizza (Veg/Non-Veg)</li>
-<li>French Fries & Ice Cream</li>
-<li>Decor, Disco Light</li>
-<li>Invitation E-Card</li>
-<li>Sound & Mic</li>
-</ul>
-<a href="/rounded_triangles_birthday_party/" class="know-more-btn">Know More</a>
+    <div style="text-align:center;">
+        Know more about this package
+    </div>
+
+    <a href="{% url 'platinum' %}" class="know-more-btn">
+        See Full Details
+    </a>
 </div>
 </div>
 </div>
 
 <!-- 4 -->
-<div class="col-lg-4 col-md-6">
+<div class="col">
 <div class="package-card">
-<img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce">
+<img src="{% static 'image/package-4.png' %}">
 <div class="card-content">
   <div>
-    <div class="package-title">Peppe Ultimate Party</div>
-    <small>3 Hours • Min 20 Pax</small>
+    <div class="package-title">Gold</div>
+    <small>2 Hours • 24 Pax</small>
   </div>
-  <div class="price">₹1049</div>
+  <div class="price">₹23999</div>
 </div>
 <div class="card-overlay">
-<h5>Includes</h5>
-<ul>
-<li>Soup & Fried Rice</li>
-<li>Ice Cream & Chocolates</li>
-<li>Play Area & Party Hall</li>
-<li>Confetti & Disco Light</li>
-<li>Sound & Mic</li>
-</ul>
-<a href="/peppe_ultimate_birthday_party/" class="know-more-btn">Know More</a>
+    <div style="text-align:center;">
+        Know more about this package
+    </div>
+
+    <a href="{% url 'gold' %}" class="know-more-btn">
+        See Full Details
+    </a>
 </div>
 </div>
 </div>
 
 <!-- 5 -->
-<div class="col-lg-4 col-md-6">
+<div class="col">
 <div class="package-card">
-<img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659">
+<img src="{% static 'image/package-2.png' %}">
 <div class="card-content">
   <div>
-    <div class="package-title">Peppe Big Bang Party</div>
-    <small>3 Hours • Min 40 Pax</small>
+    <div class="package-title">Silver Special</div>
+    <small>2 Hours • 20 Pax</small>
   </div>
-  <div class="price">₹1499</div>
+  <div class="price">₹19999</div>
 </div>
 <div class="card-overlay">
-<h5>Includes</h5>
-<ul>
-<li>Buffet Lunch</li>
-<li>Themed Decoration</li>
-<li>Invitation E-Card</li>
-<li>Disco Light & Stage</li>
-<li>Sound & Mic</li>
-</ul>
-<a href="/peppe_big_bang_birthday_party/" class="know-more-btn">Know More</a>
+    <div style="text-align:center;">
+        Know more about this package
+    </div>
+
+    <a href="{% url 'silver_special' %}" class="know-more-btn">
+        See Full Details
+    </a>
 </div>
 </div>
 </div>
 
 <!-- 6 -->
-<div class="col-lg-4 col-md-6">
+<div class="col">
 <div class="package-card">
-<img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5">
+<img src="{% static 'image/package-6.png' %}">
 <div class="card-content">
   <div>
-    <div class="package-title">Mini Surprise Party</div>
-    <small>2 Hours • Max 4 People • Extra people Rs.450/entry</small>
+    <div class="package-title">Silver Plus</div>
+    <small>2 Hours • 20 Pax </small>
   </div>
-  <div class="price">₹4000</div>
+  <div class="price">₹14999</div>
 </div>
 <div class="card-overlay">
-<h5>Includes</h5>
-<ul>
-<li>2 Hours Play Time</li>
-<li>Minimal Decorations</li>
-<li>Surprise Gift</li>
-<li>Birthday Cap & Goggles</li>
-<li>Confetti Popper</li>
-<li>Cake Cutting Table</li>
-<li><strong>Extra: ₹450 / person</strong></li>
-</ul>
-<a href="mini_surprise_party/" class="know-more-btn">Know More</a>
+    <div style="text-align:center;">
+        Know more about this package
+    </div>
+
+    <a href="{% url 'silver_plus' %}" class="know-more-btn">
+        See Full Details
+    </a>
+</div>
+</div>
+</div>
+
+
+<!-- 7 -->
+<div class="col" ><!--style="grid-column: 2;"-->
+<div class="package-card">
+<img src="{% static 'image/package-7.png' %}">
+<div class="card-content">
+  <div>
+    <div class="package-title">Silver Basic</div>
+    <small>2 Hours • 12 Pax </small>
+  </div>
+  <div class="price">₹9999</div>
+</div>
+<div class="card-overlay">
+    <div style="text-align:center;">
+        Know more about this package
+    </div>
+
+    <a href="{% url 'silver_basic' %}" class="know-more-btn">
+        See Full Details
+    </a>
 </div>
 </div>
 </div>

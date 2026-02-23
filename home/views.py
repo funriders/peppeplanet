@@ -726,6 +726,25 @@ def  index_recover(request):
 def  peppe_ultimate(request):
     return render(request, "peppe_ultimate.html")
 
+def  diamond(request):
+    return render(request, "diamond.html")
+
+def  platinum(request):
+    return render(request, "platinum.html")
+
+def  gold(request):
+    return render(request, "gold.html")
+
+def  silver_special(request):
+    return render(request, "silver_special.html")
+
+def  silver_plus(request):
+    return render(request, "silver_plus.html")
+
+def  silver_basic(request):
+    return render(request, "silver_basic.html")
+
+
 
 
 

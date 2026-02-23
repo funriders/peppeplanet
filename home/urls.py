@@ -43,6 +43,12 @@ urlpatterns = [
     path('mini_surprise_party/', views.mini_surprise_party, name='mini_surprise_party'),
     path('index_recover/', views.index_recover, name='index_recover'),
     path('peppe_ultimate/', views.peppe_ultimate, name='peppe_ultimate'),
+    path('diamond/', views.diamond, name='diamond'),
+    path('platinum/', views.platinum, name='platinum'),
+    path('gold/', views.gold, name='gold'),
+    path('silver_special/', views.silver_special, name='silver_special'),
+    path('silver_plus/', views.silver_plus, name='silver_plus'),
+    path('silver_basic/', views.silver_basic, name='silver_basic'),
     
    
    
