@@ -4,5 +4,7 @@ peppeplanet.env
 db.sqlite3
 __pycache__/
 *.py[cod]
+.git/
+.gitignore
 staticfiles/
 media/

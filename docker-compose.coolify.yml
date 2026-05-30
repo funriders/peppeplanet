@@ -1,0 +1,45 @@
+# Coolify dev stack for dev.funridersindia.com
+# nginx on the host proxies dev.funridersindia.com -> 127.0.0.1:18082
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-peppeplanet_db}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?set DB_PASSWORD}
+    volumes:
+      - peppeplanet_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-peppeplanet_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.coolify
+    restart: unless-stopped
+    env_file:
+      - peppeplanet.env
+    environment:
+      DB_HOST: postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - peppeplanet_staticfiles:/app/staticfiles
+      - peppeplanet_media:/app/media
+    ports:
+      - "127.0.0.1:18082:8000"
+    command: >
+      sh -c "python manage.py migrate --noinput &&
+             python manage.py collectstatic --noinput &&
+             gunicorn peppe_planet.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 900"
+
+volumes:
+  peppeplanet_pgdata:
+  peppeplanet_staticfiles:
+  peppeplanet_media:
